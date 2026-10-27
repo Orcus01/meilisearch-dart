@@ -23,8 +23,9 @@ class Faceting {
   ///
   /// `count` sorts facet values by the number of documents containing a facet value in descending order.
   ///
-  /// `sampledCount` sorts facet values by their approximate document count,
-  /// and requires Meilisearch v1.56.0 or later.
+  /// `sampledCount` sorts sampled facet values by their exact document count.
+  /// Sampling may omit facet values that `count` would return.
+  /// Requires Meilisearch v1.56.0 or later.
   ///
   /// example:
   ///   "*": 'alpha
